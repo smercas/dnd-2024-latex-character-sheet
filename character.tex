@@ -1,0 +1,154 @@
+%% ==================================================================
+%%  YOUR CHARACTER.  This is a file to edit.
+%%
+%%  Uncomment a line and put your value inside the second { }.
+%%  Anything still commented out prints blank, exactly like the
+%%  original sheet.
+%%
+%%  To start a fresh character, comment the lines back out.
+%%  layout.tex is never touched either way.
+%%
+%%  Four characters are special to LaTeX and must be written with
+%%  a backslash in front:   \&   \%   \#   \_
+%%  So: \dndset{class}{Fighter \& Rogue}
+%% ==================================================================
+
+%% ---- identity ----
+% \dndset{name}{}                  %% character name
+% \dndset{background}{}            %% background
+% \dndset{class}{}                 %% class
+% \dndset{species}{}               %% species
+% \dndset{subclass}{}              %% subclass
+% \dndset{level}{}                 %% level
+% \dndset{xp}{}                    %% experience points
+% \dndset{ac}{}                    %% armour class
+% \dndset{hp}{}                    %% current hit points
+% \dndset{hptemp}{}                %% temporary hit points
+% \dndset{hpmax}{}                 %% hit point maximum
+% \dndset{hdspent}{}               %% hit dice spent
+% \dndset{hdmax}{}                 %% hit dice maximum
+
+%% ---- death saves (a number, 0-3) and the shield tick ----
+% \dndset{deathsuccesses}{0}       %% 0-3, fills that many diamonds
+% \dndset{deathfailures}{0}        %% 0-3, fills that many diamonds
+% \dndprof{shield}                 %% tick the Armor Class shield
+% \dndprof{heroicinspiration}      %% tick Heroic Inspiration
+
+%% ---- derived numbers ----
+% \dndset{profbonus}{}             %% proficiency bonus
+% \dndset{initiative}{}            %% initiative
+% \dndset{speed}{}                 %% speed
+% \dndset{size}{}                  %% size
+% \dndset{passiveperception}{}     %% passive perception
+
+%% ---- ability scores and modifiers ----
+% \dndset{str}{}                   %% Strength score
+% \dndset{strmod}{}                %% Strength modifier
+% \dndset{dex}{}                   %% Dexterity score
+% \dndset{dexmod}{}                %% Dexterity modifier
+% \dndset{con}{}                   %% Constitution score
+% \dndset{conmod}{}                %% Constitution modifier
+% \dndset{int}{}                   %% Intelligence score
+% \dndset{intmod}{}                %% Intelligence modifier
+% \dndset{wis}{}                   %% Wisdom score
+% \dndset{wismod}{}                %% Wisdom modifier
+% \dndset{cha}{}                   %% Charisma score
+% \dndset{chamod}{}                %% Charisma modifier
+
+%% ---- saving throws and skills (the number written on the line) ----
+% \dndset{strsave}{}               %% Strength saving throw
+% \dndset{athletics}{}             %% Athletics
+% \dndset{dexsave}{}               %% Dexterity saving throw
+% \dndset{acrobatics}{}            %% Acrobatics
+% \dndset{sleightofhand}{}         %% Sleight of Hand
+% \dndset{stealth}{}               %% Stealth
+% \dndset{consave}{}               %% Constitution saving throw
+% \dndset{intsave}{}               %% Intelligence saving throw
+% \dndset{arcana}{}                %% Arcana
+% \dndset{history}{}               %% History
+% \dndset{investigation}{}         %% Investigation
+% \dndset{nature}{}                %% Nature
+% \dndset{religion}{}              %% Religion
+% \dndset{wissave}{}               %% Wisdom saving throw
+% \dndset{animalhandling}{}        %% Animal Handling
+% \dndset{insight}{}               %% Insight
+% \dndset{medicine}{}              %% Medicine
+% \dndset{perception}{}            %% Perception
+% \dndset{survival}{}              %% Survival
+% \dndset{chasave}{}               %% Charisma saving throw
+% \dndset{deception}{}             %% Deception
+% \dndset{intimidation}{}          %% Intimidation
+% \dndset{performance}{}           %% Performance
+% \dndset{persuasion}{}            %% Persuasion
+
+%% ---- fill the proficiency rings: one comma-separated list ----
+%% Same key names as above. One list, or as many calls as you like.
+% \dndprof{strsave,dexsave,athletics,perception,arcana}
+
+%% ---- armour training: any of light, medium, heavy, shields ----
+% \dndprof{armourlight,armourmedium,armourheavy,armourshields}
+
+%% ---- weapons & damage cantrips: up to 6, in order ----
+%% Rows fill top to bottom in the order written.
+% \dndweapon{Quarterstaff}{+2}{1d6 bludgeoning}{Versatile (1d8)}
+
+%% ---- free-text panels (page 1) ----
+% \dndset{classfeatures}{}         %% class features, left column
+% \dndset{classfeaturesii}{}       %% class features, right column
+% \dndset{speciestraits}{}         %% species traits
+% \dndset{feats}{}                 %% feats
+% \dndset{equipweapons}{}          %% weapon proficiencies
+% \dndset{equiptools}{}            %% tool proficiencies
+
+%% ==================== page 2 ====================
+%% ---- spellcasting ----
+% \dndset{spellability}{}          %% spellcasting ability
+% \dndset{spellmod}{}              %% spellcasting modifier
+% \dndset{spellsavedc}{}           %% spell save DC
+% \dndset{spellattack}{}           %% spell attack bonus
+
+%% ---- spell slots: total per level, and how many are expended ----
+% \dndset{slots1}{}                %% level 1 slot total
+% \dndset{slots1used}{}            %% level 1 slots expended
+% \dndset{slots2}{}                %% level 2 slot total
+% \dndset{slots2used}{}            %% level 2 slots expended
+% \dndset{slots3}{}                %% level 3 slot total
+% \dndset{slots3used}{}            %% level 3 slots expended
+% \dndset{slots4}{}                %% level 4 slot total
+% \dndset{slots4used}{}            %% level 4 slots expended
+% \dndset{slots5}{}                %% level 5 slot total
+% \dndset{slots5used}{}            %% level 5 slots expended
+% \dndset{slots6}{}                %% level 6 slot total
+% \dndset{slots6used}{}            %% level 6 slots expended
+% \dndset{slots7}{}                %% level 7 slot total
+% \dndset{slots7used}{}            %% level 7 slots expended
+% \dndset{slots8}{}                %% level 8 slot total
+% \dndset{slots8used}{}            %% level 8 slots expended
+% \dndset{slots9}{}                %% level 9 slot total
+% \dndset{slots9used}{}            %% level 9 slots expended
+
+%% ---- prepared spells: up to 30, in order ----
+%% Fifth argument is any of C, R, M (concentration, ritual,
+%% material) and fills the matching diamonds. Empty for none.
+% \dndspell{1}{Detect Magic}{Action}{Self}{C,R}{}
+
+%% ---- right-hand panels and coins ----
+% \dndset{appearance}{}            %% appearance
+% \dndset{backstory}{}             %% backstory & personality
+% \dndset{alignment}{}             %% alignment
+% \dndset{languages}{}             %% languages
+% \dndset{equipment}{}             %% equipment
+% \dndset{attunement1}{}           %% magic item attunement slot 1
+% \dndset{attunement2}{}           %% magic item attunement slot 2
+% \dndset{attunement3}{}           %% magic item attunement slot 3
+% \dndset{cp}{}                    %% cp coins
+% \dndset{sp}{}                    %% sp coins
+% \dndset{ep}{}                    %% ep coins
+% \dndset{gp}{}                    %% gp coins
+% \dndset{pp}{}                    %% pp coins
+
+%% ==================== appearance ====================
+%% Colour of everything you fill in.  Any xcolor name works:
+%% black, blue, red, "black!70", ...  Default is a dark ink blue.
+% \dndink{black}
+
