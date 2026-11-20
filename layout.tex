@@ -47,6 +47,7 @@
 %%
 %%    \dndset{key}{value}        write a value into a named box
 %%    \dndprof{key,key,...}      blacken proficiency rings / tick boxes
+%%    \dndexpertise{key,...}     mark skill expertise with a bullseye
 %%    \dndweapon{name}{atk}{damage}{notes}             one per row, max 6
 %%    \dndspell{lvl}{name}{time}{range}{C,R,M}{notes}  one per row, max 30
 %%    \dndink{colour}            colour of everything you fill in
@@ -56,6 +57,9 @@
 \newcommand{\dndink}[1]{\colorlet{dndFill}{#1}}
 \newcommand{\dnd@mark}[1]{\expandafter\gdef\csname dnd@p@#1\endcsname{1}}
 \newcommand{\dndprof}[1]{\forcsvlist{\dnd@mark}{#1}}
+\newcommand{\dnd@expertmark}[1]{\dnd@mark{#1}%
+  \expandafter\gdef\csname dnd@e@#1\endcsname{1}}
+\newcommand{\dndexpertise}[1]{\forcsvlist{\dnd@expertmark}{#1}}
 
 \newcounter{dnd@wrow}
 \newcommand{\dndweapon}[4]{\stepcounter{dnd@wrow}%
@@ -129,9 +133,17 @@
     {\dndfillfontsmall\dnd@fit{#4}{\csname #1\endcsname}};\fi}
 
 %% ---- marks ----
-%% \dndRing{key}{x}{y}{radius} -- solid dot inside a proficiency ring
-\newcommand{\dndRing}[4]{\ifcsname dnd@p@#1\endcsname
-  \path[fill=dndInk] (#2,#3) circle[radius=#4bp];\fi}
+%% \dndRing{key}{x}{y}{radius} -- proficiency dot or expertise bullseye
+\newcommand{\dndRing}[4]{%
+  \ifcsname dnd@e@#1\endcsname
+    \path[fill=dndInk] (#2,#3) circle[radius=#4bp];%
+    \path[fill=white] (#2,#3) circle[radius={0.70*#4bp}];%
+    \path[fill=dndInk] (#2,#3) circle[radius={0.32*#4bp}];%
+  \else
+    \ifcsname dnd@p@#1\endcsname
+      \path[fill=dndInk] (#2,#3) circle[radius=#4bp];%
+    \fi
+  \fi}
 %% a four-pointed star, drawn to match the sheet's own diamond glyph
 \newcommand{\dnd@dia}[3]{%
   \path[fill=dndInk] (#1,#2)
